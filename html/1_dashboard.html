@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <span class="icon">🎓</span>
+            QUẢN LÝ SINH VIÊN
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active" ><a href="1_dashboard.html"><span class="menu-icon">🏠</span> Dashboard</a></li>
+            <li ><a href="2_stu.html"><span class="menu-icon">👤</span> Sinh viên</a></li>
+            <li ><a href="3_cls.html"><span class="menu-icon">🏫</span> Lớp học</a></li>
+            <li><a href="4_sub.html"><span class="menu-icon">📚</span> Môn học</a></li>
+            <li><a href="5_point.html"><span class="menu-icon">📊</span> Điểm số</a></li>
+            <li><a href="6_set.html"><span class="menu-icon">⚙️</span> Cài đặt</a></li>
+        </ul>
+        <div class="sidebar-logout">
+            <a href=""><span>⏻</span> Đăng xuất</a>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+            <span class="menu-toggle">☰</span>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Tìm kiếm sinh viên, lớp học...">
+            </div>
+            <div class="topbar-right">
+                <div class="notif-btn">
+                    🔔
+                    <span class="badge">3</span>
+                </div>
+                <div class="admin-info">
+                    <div class="admin-avatar">A</div>
+                    <div>
+                        <div class="admin-name">Admin</div>
+                        <div class="admin-role">Quản trị viên</div>
+                    </div>
+                    <span style="color:#9ca3af; font-size:12px;">▼</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <div class="page-title">Dashboard</div>
+            <div class="breadcrumb">Trang chủ / <span>Dashboard</span></div>
+
+            <!-- STAT CARDS -->
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <div class="stat-icon blue">👥</div>
+                    <div>
+                        <div class="stat-label">Tổng sinh viên</div>
+                        <div class="stat-value">1,256</div>
+                        <div class="stat-change">↑ 12.5% so với tháng trước</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">👨‍🏫</div>
+                    <div>
+                        <div class="stat-label">Tổng giảng viên</div>
+                        <div class="stat-value">156</div>
+                        <div class="stat-change">↑ 8.2% so với tháng trước</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">📖</div>
+                    <div>
+                        <div class="stat-label">Tổng môn học</div>
+                        <div class="stat-value">208</div>
+                        <div class="stat-change">↑ 5.4% so với tháng trước</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">🏫</div>
+                    <div>
+                        <div class="stat-label">Tổng lớp học</div>
+                        <div class="stat-value">64</div>
+                        <div class="stat-change">↑ 3.7% so với tháng trước</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHARTS ROW -->
+            <div class="charts-row">
+                <!-- Line Chart -->
+                <div class="chart-card big">
+                    <div class="chart-card-header">
+                        <h3>Thống kê sinh viên</h3>
+                        <select class="chart-filter">
+                            <option>Năm nay</option>
+                            <option>Năm trước</option>
+                        </select>
+                    </div>
+                    <div class="line-chart">
+                        <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Y axis labels -->
+                            <text x="0" y="15" font-size="10" fill="#9ca3af">1,400</text>
+                            <text x="0" y="43" font-size="10" fill="#9ca3af">1,200</text>
+                            <text x="0" y="71" font-size="10" fill="#9ca3af">1,000</text>
+                            <text x="0" y="99" font-size="10" fill="#9ca3af">800</text>
+                            <text x="0" y="127" font-size="10" fill="#9ca3af">600</text>
+                            <text x="0" y="155" font-size="10" fill="#9ca3af">400</text>
+                            <text x="0" y="183" font-size="10" fill="#9ca3af">200</text>
+
+                            <!-- Grid lines -->
+                            <line x1="35" y1="10" x2="555" y2="10" stroke="#f3f4f6" stroke-width="1"/>
+                            <line x1="35" y1="38" x2="555" y2="38" stroke="#f3f4f6" stroke-width="1"/>
+                            <line x1="35" y1="66" x2="555" y2="66" stroke="#f3f4f6" stroke-width="1"/>
+                            <line x1="35" y1="94" x2="555" y2="94" stroke="#f3f4f6" stroke-width="1"/>
+                            <line x1="35" y1="122" x2="555" y2="122" stroke="#f3f4f6" stroke-width="1"/>
+                            <line x1="35" y1="150" x2="555" y2="150" stroke="#f3f4f6" stroke-width="1"/>
+                            <line x1="35" y1="178" x2="555" y2="178" stroke="#f3f4f6" stroke-width="1"/>
+
+                            <!-- Line -->
+                            <polyline
+                                points="45,94 87,88 129,82 171,77 213,72 255,68 297,65 339,62 381,59 423,56 465,52 520,48"
+                                fill="none"
+                                stroke="#3b82f6"
+                                stroke-width="2.5"
+                                stroke-linejoin="round"
+                            />
+                            <!-- Area fill -->
+                            <polygon
+                                points="45,94 87,88 129,82 171,77 213,72 255,68 297,65 339,62 381,59 423,56 465,52 520,48 520,178 45,178"
+                                fill="url(#blueGrad)"
+                                opacity="0.15"
+                            />
+                            <defs>
+                                <linearGradient id="blueGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#3b82f6"/>
+                                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Dots -->
+                            <circle cx="45" cy="94" r="3.5" fill="#3b82f6"/>
+                            <circle cx="87" cy="88" r="3.5" fill="#3b82f6"/>
+                            <circle cx="129" cy="82" r="3.5" fill="#3b82f6"/>
+                            <circle cx="171" cy="77" r="3.5" fill="#3b82f6"/>
+                            <circle cx="213" cy="72" r="3.5" fill="#3b82f6"/>
+                            <circle cx="255" cy="68" r="3.5" fill="#3b82f6"/>
+                            <circle cx="297" cy="65" r="3.5" fill="#3b82f6"/>
+                            <circle cx="339" cy="62" r="3.5" fill="#3b82f6"/>
+                            <circle cx="381" cy="59" r="3.5" fill="#3b82f6"/>
+                            <circle cx="423" cy="56" r="3.5" fill="#3b82f6"/>
+                            <circle cx="465" cy="52" r="3.5" fill="#3b82f6"/>
+                            <circle cx="520" cy="48" r="3.5" fill="#3b82f6"/>
+
+                            <!-- X labels -->
+                            <text x="40" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T1</text>
+                            <text x="87" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T2</text>
+                            <text x="129" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T3</text>
+                            <text x="171" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T4</text>
+                            <text x="213" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T5</text>
+                            <text x="255" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T6</text>
+                            <text x="297" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T7</text>
+                            <text x="339" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T8</text>
+                            <text x="381" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T9</text>
+                            <text x="423" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T10</text>
+                            <text x="465" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T11</text>
+                            <text x="520" y="195" font-size="10" fill="#9ca3af" text-anchor="middle">T12</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Donut Chart -->
+                <div class="chart-card small">
+                    <div class="chart-card-header">
+                        <h3>Sinh viên theo khoa</h3>
+                    </div>
+                    <div class="donut-wrap">
+                        <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 35% CNTT: blue -->
+                            <circle cx="80" cy="80" r="55" fill="none" stroke="#3b82f6" stroke-width="28"
+                                stroke-dasharray="121 226" stroke-dashoffset="0" transform="rotate(-90 80 80)"/>
+                            <!-- 25% Kinh te: green -->
+                            <circle cx="80" cy="80" r="55" fill="none" stroke="#10b981" stroke-width="28"
+                                stroke-dasharray="86.5 226" stroke-dashoffset="-121" transform="rotate(-90 80 80)"/>
+                            <!-- 20% DDT: purple -->
+                            <circle cx="80" cy="80" r="55" fill="none" stroke="#8b5cf6" stroke-width="28"
+                                stroke-dasharray="69.2 226" stroke-dashoffset="-207.5" transform="rotate(-90 80 80)"/>
+                            <!-- 15% Co khi: orange -->
+                            <circle cx="80" cy="80" r="55" fill="none" stroke="#f59e0b" stroke-width="28"
+                                stroke-dasharray="51.9 226" stroke-dashoffset="-276.7" transform="rotate(-90 80 80)"/>
+                            <!-- 5% Khac: gray -->
+                            <circle cx="80" cy="80" r="55" fill="none" stroke="#d1d5db" stroke-width="28"
+                                stroke-dasharray="17.3 226" stroke-dashoffset="-328.6" transform="rotate(-90 80 80)"/>
+                            <circle cx="80" cy="80" r="42" fill="white"/>
+                        </svg>
+                        <div class="donut-legend">
+                            <div class="donut-legend-item">
+                                <span class="label"><span class="dot" style="background:#3b82f6"></span>Công nghệ TT</span>
+                                <span class="pct">35%</span>
+                            </div>
+                            <div class="donut-legend-item">
+                                <span class="label"><span class="dot" style="background:#10b981"></span>Kinh tế</span>
+                                <span class="pct">25%</span>
+                            </div>
+                            <div class="donut-legend-item">
+                                <span class="label"><span class="dot" style="background:#8b5cf6"></span>Điện - Điện tử</span>
+                                <span class="pct">20%</span>
+                            </div>
+                            <div class="donut-legend-item">
+                                <span class="label"><span class="dot" style="background:#f59e0b"></span>Cơ khí</span>
+                                <span class="pct">15%</span>
+                            </div>
+                            <div class="donut-legend-item">
+                                <span class="label"><span class="dot" style="background:#d1d5db"></span>Khác</span>
+                                <span class="pct">5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TABLE -->
+            <div class="table-section">
+                <div class="table-header">
+                    <h3>Danh sách sinh viên</h3>
+                    <div class="table-header-right">
+                        <div class="search-table">
+                            <input type="text" placeholder="Tìm kiếm sinh viên...">
+                            <span style="color:#9ca3af;">🔍</span>
+                        </div>
+                        <button class="btn-filter">⚙ Bộ lọc</button>
+                        <button class="btn-add">+ Thêm sinh viên</button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>MSSV</th>
+                            <th>Họ và tên</th>
+                            <th>Ngày sinh</th>
+                            <th>Giới tính</th>
+                            <th>Lớp</th>
+                            <th>Khoa</th>
+                            <th>Email</th>
+                            <th>Điểm TB</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>SV001</td>
+                            <td><span class="student-avatar">N</span>Nguyễn Văn An</td>
+                            <td>12/05/2003</td>
+                            <td>Nam</td>
+                            <td>CTK42A</td>
+                            <td>Công nghệ thông tin</td>
+                            <td>nguyenvanan@gmail.com</td>
+                            <td>8.45</td>
+                            <td>
+                                <button class="action-btn view">👁</button>
+                                <button class="action-btn edit">✏️</button>
+                                <button class="action-btn delete">🗑</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>SV002</td>
+                            <td><span class="student-avatar">T</span>Trần Thị Bình</td>
+                            <td>23/08/2003</td>
+                            <td>Nữ</td>
+                            <td>QTKD42B</td>
+                            <td>Kinh tế</td>
+                            <td>tranthibinh@gmail.com</td>
+                            <td>7.89</td>
+                            <td>
+                                <button class="action-btn view">👁</button>
+                                <button class="action-btn edit">✏️</button>
+                                <button class="action-btn delete">🗑</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>SV003</td>
+                            <td><span class="student-avatar">L</span>Lê Hoàng Cường</td>
+                            <td>05/11/2003</td>
+                            <td>Nam</td>
+                            <td>DCK42A</td>
+                            <td>Điện - Điện tử</td>
+                            <td>lehoangcuong@gmail.com</td>
+                            <td>8.12</td>
+                            <td>
+                                <button class="action-btn view">👁</button>
+                                <button class="action-btn edit">✏️</button>
+                                <button class="action-btn delete">🗑</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>SV004</td>
+                            <td><span class="student-avatar">P</span>Phạm Minh Đức</td>
+                            <td>17/02/2003</td>
+                            <td>Nam</td>
+                            <td>CK42C</td>
+                            <td>Cơ khí</td>
+                            <td>phamminduc@gmail.com</td>
+                            <td>7.56</td>
+                            <td>
+                                <button class="action-btn view">👁</button>
+                                <button class="action-btn edit">✏️</button>
+                                <button class="action-btn delete">🗑</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>SV005</td>
+                            <td><span class="student-avatar">H</span>Hoàng Thị Dung</td>
+                            <td>30/09/2003</td>
+                            <td>Nữ</td>
+                            <td>CTK42A</td>
+                            <td>Công nghệ thông tin</td>
+                            <td>hoangthidung@gmail.com</td>
+                            <td>8.91</td>
+                            <td>
+                                <button class="action-btn view">👁</button>
+                                <button class="action-btn edit">✏️</button>
+                                <button class="action-btn delete">🗑</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination">
+                    <span>Hiển thị 1 đến 5 của 1,256 sinh viên</span>
+                    <div class="page-buttons">
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">...</button>
+                        <button class="page-btn">252</button>
+                        <button class="page-btn">›</button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end content -->
+    </div><!-- end main -->
+
+</body>
+</html>
