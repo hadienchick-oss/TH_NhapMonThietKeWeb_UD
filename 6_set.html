@@ -21,6 +21,7 @@
             <li ><a href="4_sub.html"><span class="menu-icon">📚</span> Môn học</a></li>
             <li ><a href="5_point.html"><span class="menu-icon">📊</span> Điểm số</a></li>
             <li class="active"><a href="6_set.html"><span class="menu-icon">⚙️</span> Cài đặt</a></li>
+            <li><a href="7_baitap.html"><span class="menu-icon">✍️</span> Bài tập</a></li>
         </ul>
         <div class="sidebar-logout">
             <a href=""><span>⏻</span> Đăng xuất</a>
@@ -61,292 +62,153 @@
             <!-- STAT CARDS -->
            
             <!-- TABLE -->
-            <div class="table-section">
-                <div class="table-header">
-                    <h3>Danh sách sinh viên</h3>
-                    <div class="table-header-right">
-                        <div class="search-table">
-                            <input type="text" placeholder="Tìm kiếm sinh viên...">
-                            <span style="color:#9ca3af;">🔍</span>
+            <div class="settings-layout">
+
+            <!-- SETTINGS MENU -->
+            
+
+            <!-- SETTINGS PANEL -->
+            <div class="settings-panel">
+                <div class="panel-title">Cài đặt chung</div>
+                <div class="panel-sub">Cấu hình các thông tin cơ bản của hệ thống</div>
+
+                <div class="panel-body">
+
+                    <!-- CỘT TRÁI -->
+                    <div>
+                        <div class="section-label">Thông tin hệ thống</div>
+
+                        <div class="field-group">
+                            <label>Tên hệ thống</label>
+                            <input type="text" value="Quản lý sinh viên">
                         </div>
-                        <button class="btn-filter">⚙ Bộ lọc</button>
-                        <button class="btn-add">+ Thêm sinh viên</button>
-                    </div>
-                </div>
+                        <div class="field-group">
+                            <label>Tên trường</label>
+                            <input type="text" value="Trường Đại học Công nghệ Sài Gòn">
+                        </div>
+                        <div class="field-group">
+                            <label>Địa chỉ</label>
+                            <input type="text" value="Cao Lỗ,Chánh Hưng, TP. HCM">
+                        </div>
+                        <div class="field-group">
+                            <label>Email liên hệ</label>
+                            <input type="email" value="lyhai14128@gmail.com">
+                        </div>
+                        <div class="field-group">
+                            <label>Số điện thoại</label>
+                            <input type="text" value="0941 579 ">
+                        </div>
+                        <div class="field-group">
+                            <label>Năm học hiện tại</label>
+                            <select>
+                                <option>2023 - 2024</option>
+                                <option>2024 - 2025</option>
+                                <option>2025 - 2026</option>
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <label>Học kỳ hiện tại</label>
+                            <select>
+                                <option>Học kỳ 1</option>
+                                <option selected>Học kỳ 2</option>
+                            </select>
+                        </div>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>MSSV</th>
-                            <th>Họ và tên</th>
-                            <th>Ngày sinh</th>
-                            <th>Giới tính</th>
-                            <th>Lớp</th>
-                            <th>Khoa</th>
-                            <th>Email</th>
-                            <th>Điểm TB</th>
-                            <th>Hành động</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>SV001</td>
-                            <td><span class="student-avatar">N</span>Nguyễn Văn An</td>
-                            <td>12/05/2003</td>
-                            <td>Nam</td>
-                            <td>CTK42A</td>
-                            <td>Công nghệ thông tin</td>
-                            <td>nguyenvanan@gmail.com</td>
-                            <td>8.45</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>SV002</td>
-                            <td><span class="student-avatar">T</span>Trần Thị Bình</td>
-                            <td>23/08/2003</td>
-                            <td>Nữ</td>
-                            <td>QTKD42B</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>SV003</td>
-                            <td><span class="student-avatar">L</span>Lê Hoàng Cường</td>
-                            <td>05/11/2003</td>
-                            <td>Nam</td>
-                            <td>DCK42A</td>
-                            <td>Điện - Điện tử</td>
-                            <td>lehoangcuong@gmail.com</td>
-                            <td>8.12</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>SV004</td>
-                            <td><span class="student-avatar">P</span>Phạm Minh Đức</td>
-                            <td>17/02/2003</td>
-                            <td>Nam</td>
-                            <td>CK42C</td>
-                            <td>Cơ khí</td>
-                            <td>phamminduc@gmail.com</td>
-                            <td>7.56</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>SV005</td>
-                            <td><span class="student-avatar">H</span>Hoàng Thị Dung</td>
-                            <td>30/09/2003</td>
-                            <td>Nữ</td>
-                            <td>CTK42A</td>
-                            <td>Công nghệ thông tin</td>
-                            <td>hoangthidung@gmail.com</td>
-                            <td>8.91</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>SV006</td>
-                            <td><span class="student-avatar">T</span>Trần Thị Bình</td>
-                            <td>23/08/2003</td>
-                            <td>Nữ</td>
-                            <td>QTKD42B</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>SV007</td>
-                            <td><span class="student-avatar">T</span>Trần Thị Bình</td>
-                            <td>23/08/2003</td>
-                            <td>Nữ</td>
-                            <td>QTKD42B</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>SV008</td>
-                            <td><span class="student-avatar">N</span>Nguyễn Văn A</td>
-                            <td>15/05/2003</td>
-                            <td>Nam</td>
-                            <td>CTK42A</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>SV009</td>
-                            <td><span class="student-avatar">L</span>Lê Thị Cúc</td>
-                            <td>12/12/2003</td>
-                            <td>Nữ</td>
-                            <td>QTKD42B</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>SV010</td>
-                            <td><span class="student-avatar">N</span>Nguyễn Văn B</td>
-                            <td>10/10/2003</td>
-                            <td>Nam</td>
-                            <td>CTK42A</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>SV011</td>
-                            <td><span class="student-avatar">N</span>Nguyễn Văn B</td>
-                            <td>10/10/2003</td>
-                            <td>Nam</td>
-                            <td>CTK42A</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>SV012</td>
-                            <td><span class="student-avatar">N</span>Nguyễn Văn B</td>
-                            <td>10/10/2003</td>
-                            <td>Nam</td>
-                            <td>CTK42A</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>SV013</td>
-                            <td><span class="student-avatar">N</span>Nguyễn Văn B</td>
-                            <td>10/10/2003</td>
-                            <td>Nam</td>
-                            <td>CTK42A</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td>SV014</td>
-                            <td><span class="student-avatar">N</span>Nguyễn Văn B</td>
-                            <td>10/10/2003</td>
-                            <td>Nam</td>
-                            <td>CTK42A</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>15</td>
-                            <td>SV015</td>
-                            <td><span class="student-avatar">N</span>Nguyễn Văn B</td>
-                            <td>10/10/2003</td>
-                            <td>Nam</td>
-                            <td>CTK42A</td>
-                            <td>Kinh tế</td>
-                            <td>tranthibinh@gmail.com</td>
-                            <td>7.89</td>
-                            <td>
-                                <button class="action-btn view">👁</button>
-                                <button class="action-btn edit">✏️</button>
-                                <button class="action-btn delete">🗑</button>
-                            </td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-
-                <div class="pagination">
-                    <span>Hiển thị 1 đến 15 của 1,256 sinh viên</span>
-                    <div class="page-buttons">
-                        <button class="page-btn active">1</button>
-                        <button class="page-btn">2</button>
-                        <button class="page-btn">3</button>
-                        <button class="page-btn">...</button>
-                        <button class="page-btn">84</button>
-                        <button class="page-btn">›</button>
+                        <button class="btn-save">Lưu thay đổi</button>
                     </div>
+
+                    <!-- CỘT PHẢI -->
+                    <div>
+                        <div class="section-label">Cài đặt điểm</div>
+
+                        <div class="field-group">
+                            <label>Thang điểm</label>
+                            <select>
+                                <option selected>10</option>
+                                <option>4</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <label>Điểm đậu tối thiểu</label>
+                            <input type="text" value="5.0">
+                        </div>
+                        <div class="field-group">
+                            <label>Làm tròn điểm đến</label>
+                            <select>
+                                <option selected>0.1</option>
+                                <option>0.5</option>
+                                <option>1</option>
+                            </select>
+                        </div>
+
+                        <div class="section-label" style="margin-top:24px">Cài đặt khác</div>
+
+                        <div class="toggle-row">
+                            <div class="toggle-info">
+                                <div class="toggle-title">Cho phép đăng ký học phần</div>
+                                <div class="toggle-desc">Sinh viên có thể đăng ký học phần trực tuyến</div>
+                            </div>
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-row">
+                            <div class="toggle-info">
+                                <div class="toggle-title">Hiển thị điểm cho sinh viên</div>
+                                <div class="toggle-desc">Sinh viên có thể xem điểm của mình</div>
+                            </div>
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-row">
+                            <div class="toggle-info">
+                                <div class="toggle-title">Bật xác nhận khi xóa dữ liệu</div>
+                                <div class="toggle-desc">Hiển thị hộp thoại xác nhận khi xóa</div>
+                            </div>
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="field-group">
+                            <label>Số lượng bản ghi trên trang</label>
+                            <select>
+                                <option selected>10</option>
+                                <option>20</option>
+                                <option>50</option>
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+        </div>
 
+        <!-- BACKUP BAR -->
+        <div class="backup-bar">
+            <div class="backup-left">
+                <div class="backup-icon">🗄️</div>
+                <div>
+                    <div class="backup-title">Sao lưu dữ liệu gần nhất</div>
+                    <div class="backup-meta">Thời gian: 20/05/2026 14:30:45</div>
+                    <div class="backup-meta">Người thực hiện: Lý Văn Hải</div>
+                </div>
+            </div>
+            <div class="backup-right">
+                <button class="btn-outline">📋 Lịch sử sao lưu</button>
+                <button class="btn-blue">💾 Sao lưu ngay</button>
+            </div>
+        </div>
+
+    </div>
+            
         </div><!-- end content -->
     </div><!-- end main -->
 

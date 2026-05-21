@@ -500,3 +500,172 @@
             background: #f3f4f6;
         }
         
+
+
+
+
+
+        
+
+        /* ── SETTINGS LAYOUT ── */
+        .settings-layout {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        /* ── SETTINGS MENU ── */
+        .settings-menu {
+            width: 200px;
+            flex-shrink: 0;
+        }
+        .settings-menu-title {
+            font-size: 11px; font-weight: 700;
+            color: #94a3b8; letter-spacing: .08em;
+            text-transform: uppercase; margin-bottom: 12px;
+            padding: 0 4px;
+        }
+        .settings-menu a {
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 12px;
+            font-size: 14px; color: #64748b;
+            text-decoration: none; border-radius: 8px;
+            transition: background .15s, color .15s;
+            margin-bottom: 2px;
+        }
+        .settings-menu a:hover { background: #f1f5f9; color: #1e293b; }
+        .settings-menu a.active {
+            background: #eff6ff; color: #2563eb; font-weight: 600;
+        }
+        .settings-menu a .s-icon { font-size: 16px; width: 20px; text-align: center; }
+
+        /* ── SETTINGS PANEL ── */
+        .settings-panel {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            padding: 28px;
+            border: 1px solid #e2e8f0;
+        }
+        .panel-title { font-size: 17px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+        .panel-sub { font-size: 13px; color: #94a3b8; margin-bottom: 28px; }
+
+        .panel-body { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+        .field-group { margin-bottom: 16px; }
+        .field-group label {
+            display: block; font-size: 13px;
+            color: #64748b; margin-bottom: 6px;
+        }
+        .field-group input,
+        .field-group select {
+            width: 100%; padding: 9px 12px;
+            border: 1px solid #e2e8f0; border-radius: 8px;
+            font-size: 13px; color: #1e293b;
+            outline: none; transition: border .2s;
+            appearance: none; background: white;
+        }
+        .field-group input:focus,
+        .field-group select:focus { border-color: #2563eb; }
+        .field-group select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 32px;
+        }
+
+        .section-label {
+            font-size: 14px; font-weight: 700;
+            color: #1e293b; margin-bottom: 16px;
+        }
+
+        /* Toggle switch */
+        .toggle-row {
+            display: flex; align-items: flex-start;
+            justify-content: space-between; gap: 16px;
+            margin-bottom: 20px;
+        }
+        .toggle-info .toggle-title { font-size: 13px; font-weight: 600; color: #1e293b; }
+        .toggle-info .toggle-desc { font-size: 12px; color: #94a3b8; margin-top: 2px; }
+        .toggle {
+            position: relative; width: 44px; height: 24px; flex-shrink: 0;
+        }
+        .toggle input { opacity: 0; width: 0; height: 0; }
+        .toggle-slider {
+            position: absolute; inset: 0;
+            background: #e2e8f0; border-radius: 24px;
+            cursor: pointer; transition: background .2s;
+        }
+        .toggle-slider::before {
+            content: ''; position: absolute;
+            width: 18px; height: 18px;
+            left: 3px; top: 3px;
+            background: white; border-radius: 50%;
+            transition: transform .2s;
+        }
+        .toggle input:checked + .toggle-slider { background: #2563eb; }
+        .toggle input:checked + .toggle-slider::before { transform: translateX(20px); }
+
+        .btn-save {
+            background: #2563eb; color: white;
+            border: none; border-radius: 8px;
+            padding: 11px 24px; font-size: 14px; font-weight: 600;
+            cursor: pointer; margin-top: 8px;
+            transition: background .2s;
+        }
+        .btn-save:hover { background: #1d4ed8; }
+
+        /* ── BACKUP BAR ── */
+        .backup-bar {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px 24px;
+            display: flex; align-items: center;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+        .backup-left { display: flex; align-items: center; gap: 14px; }
+        .backup-icon {
+            width: 44px; height: 44px;
+            background: #eff6ff; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+        }
+        .backup-title { font-size: 14px; font-weight: 700; color: #1e293b; }
+        .backup-meta { font-size: 12px; color: #94a3b8; margin-top: 2px; }
+        .backup-right { display: flex; gap: 10px; }
+        .btn-outline {
+            background: white; color: #64748b;
+            border: 1px solid #e2e8f0; border-radius: 8px;
+            padding: 9px 18px; font-size: 13px; font-weight: 500;
+            cursor: pointer; display: flex; align-items: center; gap: 6px;
+            transition: border .2s, color .2s;
+        }
+        .btn-outline:hover { border-color: #2563eb; color: #2563eb; }
+        .btn-blue {
+            background: #2563eb; color: white;
+            border: none; border-radius: 8px;
+            padding: 9px 18px; font-size: 13px; font-weight: 600;
+            cursor: pointer; display: flex; align-items: center; gap: 6px;
+            transition: background .2s;
+        }
+        .btn-blue:hover { background: #1d4ed8; }
+
+
+         /* ── Bài tập ── */
+
+         .lab div{
+            font-size: 20px;
+            font-weight: bolder;
+            color: #111827;
+            line-height: 1.2;
+         }
+         .lab a{
+            color :black;
+            text-decoration: none;
+         }
+         .lab a:hover{
+            color :green;
+            text-decoration: underline;
+         }
