@@ -19,7 +19,7 @@
             <li class="active"><a href="2_stu.html"><span class="menu-icon">👤</span> Sinh viên</a></li>
             <li ><a href="3_cls.html"><span class="menu-icon">🏫</span> Lớp học</a></li>
             <li><a href="4_sub.html"><span class="menu-icon">📚</span> Môn học</a></li>
-            <li><a href="5_point.html"><span class="menu-icon">📊</span> Điểm số</a></li>
+            <li><a href="5_point.html"><span class="menu-icon">📊</span> Điểm số</a></li> 
             <li><a href="6_set.html"><span class="menu-icon">⚙️</span> Cài đặt</a></li>
             <li><a href="7_baitap.html"><span class="menu-icon">✍️</span> Bài tập</a></li>
         </ul>
@@ -112,7 +112,7 @@
                             <span style="color:#9ca3af;">🔍</span>
                         </div>
                         <button class="btn-filter">⚙ Bộ lọc</button>
-                        <button class="btn-add">+ Thêm sinh viên</button>
+                        <button onclick="window.location.href='add.html'" class="btn-add">+ Thêm sinh viên</button>
                     </div>
                 </div>
 
@@ -391,6 +391,12 @@
 
         </div><!-- end content -->
     </div><!-- end main -->
+
+
+
+    <!-- Overlay (chỉ dùng trên mobile) -->
+<div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+    <script src="script.js"></script>
 
 </body>
 </html>

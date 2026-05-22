@@ -669,3 +669,151 @@
             color :green;
             text-decoration: underline;
          }
+
+
+
+
+          @media (min-width: 1000px) {
+            .bottom-nav { display: none; }
+        }
+ 
+        /* ── SIDEBAR TOGGLE ── */
+ 
+        /* Sidebar ẩn */
+        .sidebar.hidden {
+            transform: translateX(-100%);
+        }
+       
+        .main {
+            transition: margin-left .25s ease;
+        }
+        .main.full {
+            margin-left: 0;
+        }
+ 
+        /* Overlay mobile khi sidebar mở */
+        .sidebar-overlay {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,.45);
+            z-index: 99;
+        }
+        .sidebar-overlay.show { display: block; }
+
+        
+    
+
+  
+
+
+        /* ==================== SIDEBAR TOGGLE ==================== */
+        .sidebar {
+            width: 240px;
+            transition: width 0.3s ease;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .main {
+            transition: margin-left 0.3s ease;
+        }
+
+        /* Khi sidebar thu gọn */
+        body.sidebar-collapsed .sidebar {
+            width: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body.sidebar-collapsed .main {
+            margin-left: 0;
+        }
+
+        /* Trên mobile thì ẩn hoàn toàn */
+        @media (max-width: 641px) {
+            .sidebar {
+                position: fixed;
+                z-index: 1000;
+            }
+            body.sidebar-collapsed .sidebar {
+                width: 0;
+            }
+            
+        }
+
+
+        /* ==================== RESPONSIVE TABLE ==================== */
+        .table-section {
+            overflow-x: auto;           /* Cho phép cuộn ngang */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            min-width: 900px;           /* Ngăn bảng co lại quá nhỏ */
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        /* Trên mobile: làm cho bảng dễ nhìn hơn */
+        @media (max-width: 1024px) {
+            .table-section {
+                padding: 15px;
+                margin-top: 16px;
+            }
+            
+            table thead th,
+            table tbody td {
+                padding: 10px 8px;
+                font-size: 12px;
+                white-space: nowrap;    /* Không xuống dòng */
+            }
+            
+            .search-table input {
+                width: 140px;           /* Thu nhỏ ô tìm kiếm */
+            }
+            
+            .table-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            
+            .table-header-right {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        /* Trên mobile rất nhỏ */
+        @media (max-width: 768px) {
+            table {
+                min-width: 750px;
+            }
+        }
+
+               /* Responsive cho phần Lab */
+        .lab .stat-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        /* Trên mobile: 2 lab trên 1 hàng */
+        @media (max-width: 1024px) {
+            .lab .stat-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Trên mobile nhỏ: 1 lab trên 1 hàng */
+        @media (max-width: 600px) {
+            .lab .stat-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .stat-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+        }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mySlides{
+           margin-top: 5%;
+            margin-left: 20%;
+        }
+        .mySlides img{
+            border-radius: 10px;
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            
+        }
+        .flip-3d::before {
+    animation: shockwaveBoom 0.9s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+.flip-3d img {
+    animation: superNovaExplosion 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+/* 1. Sóng chấn động lửa quét sạch màn hình */
+@keyframes shockwaveBoom {
+    0% { width: 10px; height: 10px; opacity: 1; border-width: 30px; filter: blur(0px); }
+    50% { opacity: 1; filter: blur(5px); }
+    100% { width: 180%; height: 180%; opacity: 0; border-width: 1px; filter: blur(30px); }
+}
+
+/* 2. Ảnh nổ tung từ tâm siêu tân tinh, bốc cháy đỏ rực rồi hiện nguyên hình */
+@keyframes superNovaExplosion {
+    0% {
+        transform: scale(0) rotate(720deg) translateZ(1500px);
+        filter: brightness(20) contrast(5) saturate(3) drop-shadow(0 0 100px #ff3300);
+        opacity: 0;
+    }
+    40% {
+        transform: scale(1.4) rotate(-20deg) translateZ(-200px);
+        filter: brightness(4) contrast(2) saturate(2) drop-shadow(0 0 50px #ff6600);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(0.9) rotate(5deg);
+        filter: brightness(1.5) contrast(1.2);
+    }
+    100% {
+        transform: scale(1) rotate(0deg) translateZ(0);
+        filter: brightness(1) contrast(1) saturate(1);
+        opacity: 1;
+    }
+}
+
+
+
+        .prev,
+        .next {
+       
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            border-radius: 16px;
+            background-color: blue;
+        }
+        .next {
+            right: 0;
+            
+        }
+        .prev:hover,
+        .next:hover{
+            background-color: brown;
+        }
+        
+
+
+        .dot {
+        display: inline-block;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        background-color: #999;
+        cursor: pointer;
+      }
+      .dot:hover {
+        background-color: #555;
+      }
+      .dot.active {
+        background-color: #555;
+      }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="mySlides flip-3d">
+            <img src="img/slide_1.jpeg" alt="">
+        </div>
+        <div class="mySlides flip-3d">
+            <img src="img/slide_2.jpg" alt="">
+        </div>
+        <div class="mySlides flip-3d">
+            <img src="img/slide_3.jpg" alt="">
+        </div>
+        <div class="mySlides flip-3d">
+            <img src="img/slide_4.jpg" alt="">
+        </div>
+        <div class="mySlides flip-3d">
+            <img src="img/slide_5.jpg" alt="">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)"><</a>
+        <a class="next"onclick="plusSlides(1)">></a>
+    </div>
+    <br />
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+  
+        function plusSlides(n) {
+          showSlides((slideIndex += n));
+        }
+  
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+  
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName('mySlides');
+            let dots = document.getElementsByClassName('dot');
+          if (n > slides.length) slideIndex = 1;
+          if (n < 1) slideIndex = slides.length;
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active', '');
+          }
+          slides[slideIndex - 1].style.display = 'block';
+          dots[slideIndex - 1].className += ' active';
+        }
+
+        setInterval(()=>{
+            plusSlides(1);
+        },2000);
+      </script>
+</body>
+</html>

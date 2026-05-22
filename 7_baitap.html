@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản Lý Sinh Viên</title>
+    <title>Quản Lý Sinh Viên - Bài Tập</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
 </head>
 <body>
 
@@ -15,12 +18,12 @@
             QUẢN LÝ SINH VIÊN
         </div>
         <ul class="sidebar-menu">
-            <li ><a href="index.html"><span class="menu-icon">🏠</span> Dashboard</a></li>
-            <li ><a href="2_stu.html"><span class="menu-icon">👤</span> Sinh viên</a></li>
-            <li ><a href="3_cls.html"><span class="menu-icon">🏫</span> Lớp học</a></li>
-            <li ><a href="4_sub.html"><span class="menu-icon">📚</span> Môn học</a></li>
-            <li ><a href="5_point.html"><span class="menu-icon">📊</span> Điểm số</a></li>
-            <li ><a href="6_set.html"><span class="menu-icon">⚙️</span> Cài đặt</a></li>
+            <li><a href="index.html"><span class="menu-icon">🏠</span> Dashboard</a></li>
+            <li><a href="2_stu.html"><span class="menu-icon">👤</span> Sinh viên</a></li>
+            <li><a href="3_cls.html"><span class="menu-icon">🏫</span> Lớp học</a></li>
+            <li><a href="4_sub.html"><span class="menu-icon">📚</span> Môn học</a></li>
+            <li><a href="5_point.html"><span class="menu-icon">📊</span> Điểm số</a></li>
+            <li><a href="6_set.html"><span class="menu-icon">⚙️</span> Cài đặt</a></li>
             <li class="active"><a href="7_baitap.html"><span class="menu-icon">✍️</span> Bài tập</a></li>
         </ul>
         <div class="sidebar-logout">
@@ -30,26 +33,20 @@
 
     <!-- MAIN -->
     <div class="main">
-
-        <!-- TOPBAR -->
         <div class="topbar">
             <span class="menu-toggle">☰</span>
             <div class="search-box">
                 <span class="search-icon">🔍</span>
-                <input type="text" placeholder="Tìm kiếm sinh viên, lớp học...">
+                <input type="text" placeholder="Tìm kiếm bài tập...">
             </div>
             <div class="topbar-right">
-                <div class="notif-btn">
-                    🔔
-                    <span class="badge">3</span>
-                </div>
+                <div class="notif-btn">🔔 <span class="badge">3</span></div>
                 <div class="admin-info">
                     <div class="admin-avatar">A</div>
                     <div>
                         <div class="admin-name">Admin</div>
                         <div class="admin-role">Quản trị viên</div>
                     </div>
-                    <span style="color:#9ca3af; font-size:12px;">▼</span>
                 </div>
             </div>
         </div>
@@ -59,9 +56,7 @@
             <div class="page-title">Bài tập</div>
             <div class="breadcrumb">Dashboard / <span>Bài tập</span></div>
 
-            <!-- STAT CARDS -->
-           
-            <!-- Bài tập -->
+            <!-- Thông tin sinh viên -->
             <div class="stat-cards">
                 <div class="stat-card">
                     <div class="stat-icon blue">😘</div>
@@ -71,35 +66,87 @@
                         <div class="stat-change">D23_TH13</div>
                     </div>
                 </div>
-                
             </div>
 
-           
-            
-            <div class="lab">
+            <!-- Danh sách Lab -->
+            <div class="lab" style="margin-top: 24px;">
 
                 <div class="stat-cards">
-                    <div class="stat-card"><a class="stat-card" href="">Lab_1</a></div>
-                    <div class="stat-card"><a class="stat-card" href="">Lab_2</a></div>
-                    <div class="stat-card"><a class="stat-card" href="">Lab_3</a></div>
-                 </div>
-                <div class="stat-cards">
-                    <div class="stat-card"><a class="stat-card" href="">Lab_4</a></div>
-                    <div class="stat-card"><a class="stat-card" href="">Lab_5</a></div>
-                    <div class="stat-card"><a class="stat-card" href="">Lab_6</a></div>
+                    <div class="stat-card">
+                        <h3>Lab01</h3>
+                        <div>
+                            <a href="Lab01+02/lab02_bai3.html">Lab1_3</a><br>
+                            <a href="Lab01+02/lab02_bai3.html">Lab1_4</a>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Lab02</h3>
+                        <div>
+                            <a href="Lab01+02/lab02_bai1.html">Lab2_1</a><br>
+                            <a href="Lab01+02/lab02_bai2.html">Lab2_2</a><br>
+                            <a href="Lab01+02/lab02_bai3.html">Lab2_3</a>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Lab03</h3>
+                        <div>
+                            <a href="Lab03/Vi_du_Lab01/lab03_bai1.html">Lab3_1</a><br>
+                            <a href="Lab03/Vi_du/index.html">Lab3_2</a><br>
+                            <a href="Lab03/Vi_du_Lab01/lab03_bai3.html">Lab3_3</a>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Lab04</h3>
+                        <div>
+                            <a href="Lab04/Vi_du/lab04_bai1.html">Lab4_1</a><br>
+                            <a href="Lab04/Vi_du/lab04_bai2.html">Lab4_2</a><br>
+                            <a href="Lab04/Vi_du/lab04_bai3.html">Lab4_3</a>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="stat-cards">
-                    <div class="stat-card"><a class="stat-card" href="">Lab_7</a></div>
-                    <div class="stat-card"><a class="stat-card" href="">Lab_8</a></div>
-                    <div class="stat-card"><a class="stat-card" href="">Lab_9</a></div>
+                    <div class="stat-card">
+                        <h3>Lab05</h3>
+                        <div>
+                            <a href="Lab05/Bai_2/index.html">Lab5_1</a><br>
+                            <a href="Lab05/Vi_du/index.html">Lab5_2</a><br>
+                            
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Lab06</h3>
+                        <div>
+                            <a href="Lab06/lab06_menu_responsive.html">Lab6_1</a><br>
+                            <a href="Lab06/lab06_bai2.html">Lab6_2</a><br>
+                            <a href="Lab06/lab06_bai3.html">Lab6_3</a>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Lab07</h3>
+                        <div>
+                            <a href="Lab07/demo_bai_2/index.html">Lab7_1</a><br>
+                            <a href="Lab07/Vi_du/index.html">Lab7_2</a>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Lab08</h3>
+                        <div>
+                            <a href="Lab08/lab08_json.html">Lab8_1</a><br>
+                            <a href="Lab08/slider copy.html">Lab8_2</a><br>
+                            <a href="Lab08/slider.html">Lab8_3 - Lab8_3_v2</a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
+        </div>
+    </div>
 
 
 
-        </div><!-- end content -->
-    </div><!-- end main -->
-
+    <!-- Overlay (chỉ dùng trên mobile) -->
+<div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+    <script src="script.js"></script>
 </body>
 </html>
